@@ -1,0 +1,68 @@
+@import 'fonts.css';
+
+:root{
+    --main-color : #FFF7D8;
+    --accent-color-1: #9CAE7F;
+    --accent-color-2: #F0C07D;
+    --body-text-color: #1B0000;
+    --shadow: rgba(0,0,0,0.5);
+
+
+}
+
+body {
+    color: var(--body-text-color);
+    background-color: var(--main-color);
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section{
+    margin-block-end: 20px;
+}
+
+.container{
+    display: flexbox;
+    background-color: var(--accent-color-2);
+    padding: 5px;
+    box-shadow: 4px 4px var(--shadow);
+    size: 1em;
+}
+
+.topbar{
+    --nav-height: 10%;
+
+    background-color: var(--accent-color-1);
+    padding: 5px 10%;
+    height: var(--nav-height);
+
+    position: sticky;
+    top: 0;
+    
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: top .1s ease-out;
+}
+
+.topbar.hidden{
+    top: -20%;
+}
+
+
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a{
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}

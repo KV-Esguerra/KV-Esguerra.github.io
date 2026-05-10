@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans');
 
-.topbar{
+.navbar{
     font-family: "Alumni Sans SC", sans-serif;
     font-optical-sizing: auto;
-    font-size: xx-large;
+    font-size: 2rem;
     font-weight: bold;
+    font-style: normal;
+}
+
+p {
+    font-family: "Alumni Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.8rem;
+    font-weight: auto;
     font-style: normal;
 }

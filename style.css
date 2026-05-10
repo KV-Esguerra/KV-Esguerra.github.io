@@ -1,4 +1,5 @@
 @import 'fonts.css';
+@import 'cursor.css';
 
 :root{
     --main-color : #FFF7D8;
@@ -6,10 +7,12 @@
     --accent-color-2: #F0C07D;
     --body-text-color: #1B0000;
     --shadow: rgba(0,0,0,0.5);
-
-
 }
 
+svg{
+    color: #1B0000;
+    fill: #1B0000;
+}
 body {
     color: var(--body-text-color);
     background-color: var(--main-color);
@@ -17,26 +20,26 @@ body {
 }
 
 main {
-    padding: 20px;
+    padding: .5rem;
 }
 
 section{
-    margin-block-end: 20px;
+    margin-block-end: 1rem;
 }
 
 .container{
     display: flexbox;
     background-color: var(--accent-color-2);
-    padding: 5px;
+    padding: 5px 15px;
     box-shadow: 4px 4px var(--shadow);
-    size: 1em;
+    size: 1rem;
 }
 
-.topbar{
+.navbar{
     --nav-height: 10%;
 
     background-color: var(--accent-color-1);
-    padding: 5px 10%;
+    padding: 5px min(1em,10%);
     height: var(--nav-height);
 
     position: sticky;
@@ -49,11 +52,9 @@ section{
     transition: top .1s ease-out;
 }
 
-.topbar.hidden{
+.navbar.hidden{
     top: -20%;
 }
-
-
 
 .nav-links{
     list-style: none;
@@ -65,4 +66,18 @@ section{
     position: relative;
     text-decoration: none;
     color: inherit;
+}
+
+.dropdown{
+    background-color: transparent;
+    border-color: transparent;
+}
+.dropdown line{
+    stroke: var(--body-text-color);
+    stroke-width: 10px;
+    stroke-linecap: round;
+}
+
+.top-line{
+    transform-origin: translate(10px 100px);
 }

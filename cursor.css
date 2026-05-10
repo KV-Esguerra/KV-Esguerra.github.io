@@ -1,0 +1,7 @@
+:root{
+    cursor: url("Assets/Cursor.svg"), default;
+}
+
+.clickable:hover:not(:active) {
+    cursor: url("/Assets/Pointer.svg"), pointer;
+}

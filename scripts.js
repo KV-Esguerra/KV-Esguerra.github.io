@@ -1,4 +1,4 @@
-const nav = document.querySelector(".topbar");
+const nav = document.querySelector(".navbar");
 
 let lastScrollPos = window.scrollY;
 

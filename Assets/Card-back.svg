@@ -1,0 +1,16 @@
+<svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Card-back">
+<g id="Rectangle 18">
+<rect x="1" y="1" width="23" height="33" rx="2" fill="#9CAE7F"/>
+<rect x="1" y="1" width="23" height="33" rx="2" fill="url(#pattern0_36_174)" fill-opacity="0.2"/>
+<rect x="1" y="1" width="23" height="33" rx="2" stroke="#566047" stroke-width="2"/>
+</g>
+<path id="Vector" d="M7 18.1027C7 20.8641 9.68629 23.1027 13 23.1027C16.3137 23.1027 19 20.8641 19 18.1027C19 17.192 18.7078 16.3381 18.1973 15.6027C17.9439 15.2377 19.2211 12.7157 18.5 12.1027C17.7789 11.4897 15.9729 13.8306 15.5 13.6027C14.6175 13.1773 14.0929 13.1027 13 13.1027C11.9071 13.1027 11.3825 13.1773 10.5 13.6027C10.0271 13.8306 8.22105 11.4897 7.5 12.1027C6.77895 12.7157 8.05607 15.2377 7.80269 15.6027C7.29218 16.3381 7 17.192 7 18.1027Z" fill="#566047" fill-opacity="0.8"/>
+</g>
+<defs>
+<pattern id="pattern0_36_174" patternUnits="userSpaceOnUse" patternTransform="matrix(5.00053 0 0 5.00053 9.99973 14.9997)" preserveAspectRatio="none" viewBox="-2.98055e-08 0 5.00053 5.00053" width="1" height="1">
+<g id="pattern0_36_174_inner">
+<rect id="Rectangle 16" x="2.50027" width="3.53591" height="3.53591" transform="rotate(45 2.50027 0)" fill="#D9D9D9"/>
+</g>
+</pattern></defs>
+</svg>

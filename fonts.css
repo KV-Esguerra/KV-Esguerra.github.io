@@ -16,3 +16,11 @@ p {
     font-weight: auto;
     font-style: normal;
 }
+
+h1{
+    font-family: "Alumni Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+}

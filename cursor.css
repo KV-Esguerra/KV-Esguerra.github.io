@@ -1,7 +1,0 @@
-:root{
-    cursor: url("Assets/Group\ 2.png"), wait;
-}
-
-.clickable:hover:not(:active) {
-    cursor: url("/Assets/Pointer.svg"), pointer;
-}

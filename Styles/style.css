@@ -31,29 +31,26 @@ body {
 }
 
 main {
-    --padding: min(calc(pow(calc(10vw/1px),1.5)/100 * 1vw),30%);
     padding-block-start: 2rem;
-    
-    display: grid;
-    grid-template-columns: [edge-start] var(--padding) [content-start] 10fr [content-end] var(--padding) [edge-end];    
-
-    row-gap: 1rem;
 }
  
-main > *{
+.content-grid,
+.full-width {
+    --padding: min(calc(pow(calc(10vw/1px),1.5)/100 * 1vw),30%);
+    display: grid;
+    grid-template-columns: [edge-start] var(--padding) [content-start] 10fr [content-end] var(--padding) [edge-end];
+}
+.content-grid > * ,
+.full-width   > * {
     grid-column: content;
-} 
+}
 
 .full-width{
     grid-column: edge;
 }
 
-section{
-    margin-block-end: 1rem;
-}
-
-.content{
-    grid-column: content;
+.row-gap{
+    row-gap: 1rem;
 }
 
 /* ------------------ Navigation Classes ------------------ */

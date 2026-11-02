@@ -7,40 +7,60 @@
     <link rel="stylesheet" href="/Styles/style.css">
     
     <title>Paper Isle</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page.css">
+
+    
 </head>
 
 <body>
     <script id="load-nav" src="/loadnav.js"></script>
+    
     <main class="content-grid row-gap">
         <div class="card">
             <h1>About</h1>
             <p> Small combat feel project showing off various UX skills.</p>
         </div>
-        <section class="card">
-            <h2>Light Attack</h2>
-            <video width="100%" controls>
-                <source src="Videos/Light.mp4">
-            </video>
-            <p>Simple swing with particle trail</p>
+
+        <section id="attackCard" class="card attack">
+            <div>
+                <video id="Light">
+                    <source src="Videos/Light.mp4">
+                </video>
+                <video id="Medium" >
+                    <source src="Videos/Medium.mp4">
+                </video>
+                <video id="Heavy" >
+                    <source src="Videos/Heavy-2.mp4">
+                </video>
+                <div class="buttons">
+                    <button id="Light"></button>
+                    <button id="Medium"></button>
+                    <button id="Heavy"></button>
+                </div>
+            </div>
+            <div>
+                <h2>Light Attack</h2>    
+                <p>Simple swing with particle trail</p>
+            </div>
+            
         </section>
         <section class="card">
             <h2>Medium Attack</h2>
-            <video width="100%" controls>
+            <video controls>
                 <source src="Videos/Medium.mp4">
             </video>
             <p>Hitstop combined with a shader</p>
         </section>
         <section class="card">
             <h2>Heavy Attack</h2>
-            <video width="100%" controls>
+            <video controls>
                 <source src="Videos/Heavy.mp4">
             </video>
             
         </section>
         <section class="card">
             <h2>Taking Damage</h2>
-            <video width="100%" controls>
+            <video controls>
                 <source src="Videos/Damaged.mp4">
             </video>
             <p>WIP [I need to finish this one -_-]</p>
@@ -54,6 +74,6 @@
     
 
 
-
+    <script src="page.js"></script>
 </body>
 </html>

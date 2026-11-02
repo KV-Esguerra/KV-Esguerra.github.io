@@ -11,9 +11,9 @@
 
 body {
     font-family: "Alumni Sans", sans-serif;
-    font-weight: 450;
+    font-weight: 500;
     font-optical-sizing: auto;
-    font-size: 1.2rem;
+    font-size: clamp(1rem,calc(.6rem + 1vw),1.6rem);
     font-weight: auto;
 }
 
@@ -23,4 +23,12 @@ h1{
     font-size: 2rem;
     font-weight: bold;
     font-style: normal;
+}
+
+h2,h3{
+    margin-block: .5rem;
+}
+
+p{
+    margin-block: 1em;
 }

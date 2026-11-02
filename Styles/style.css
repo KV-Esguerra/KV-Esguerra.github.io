@@ -7,9 +7,14 @@
     --_accent-1-light:oklch(from var(--_accent-1) calc(l + .1) c h);
     --text-color: #3d0505;
     --text-color-bold: #5c0f0f;
-    --shadow-harsh: rgba(77, 10, 10, 0.795);
-    --shadow-soft:  rgba(34, 12, 12, 0.466);
-    --drop-shadow: 5px 5px 4px var(--shadow-soft);
+    --text-color-light: #f6f7d8;
+
+    --_shadow-harsh: var(--shadow-harsh,rgba(77, 10, 10, 0.795));
+    --_shadow-soft:  var(--shadow-soft,rgba(34, 12, 12, 0.466));
+    --drop-shadow: 5px 5px 4px var(--_shadow-soft);
+    --drop-shadow-harsh: 5px 5px 4px var(--_shadow-harsh);
+
+    --_bg-image: var(--bg-image,url(/Assets/BG.png));
 }
 
 svg{
@@ -21,24 +26,43 @@ body {
     color: var(--text-color);
 
     background-color: var(--_background);
-    background-image: url(/Assets/BG.png);
+    background-image: var(--_bg-image);
     background-repeat: repeat;
     background-position: center;
 
     background-size: 265px ;
     margin: 0;
 
+    margin-block-end: 20px;
 }
 
 main {
     padding-block-start: 2rem;
 }
  
+p {
+    text-wrap: pretty;
+}
+
+video{
+    max-width: 100%;
+}
+img{
+    width: 100%;
+}
+
+ul{list-style: none;}
+
+section {margin-block: .5rem;}
+
+.hidden {display: none;}
+
+/* ------------------ Page Layout ------------------ */
 .content-grid,
 .full-width {
     --padding: min(calc(pow(calc(10vw/1px),1.5)/100 * 1vw),30%);
     display: grid;
-    grid-template-columns: [edge-start] var(--padding) [content-start] 10fr [content-end] var(--padding) [edge-end];
+    grid-template-columns: [edge-start] var(--padding) [content-start] auto [content-end] var(--padding) [edge-end];
 }
 .content-grid > * ,
 .full-width   > * {
@@ -47,13 +71,15 @@ main {
 
 .full-width{
     grid-column: edge;
+    padding-block: 1rem;
 }
 
 .row-gap{
     row-gap: 1rem;
 }
 
-/* ------------------ Navigation Classes ------------------ */
+
+/* ------------------ Navbar ------------------ */
 
 .navbar{
     --nav-height: max(5rem,1vw);
@@ -71,7 +97,7 @@ main {
     padding-inline: clamp(0.5rem, calc(pow(calc(50vw/200px),1.6) * 1vw),30%);
 
 
-    box-shadow: 0px 5px 3px var(--shadow-soft);
+    box-shadow: 0px 5px 3px rgba(34, 12, 12, 0.466);
 
     transition: top .1s ease-out;
     z-index: 5;
@@ -79,7 +105,7 @@ main {
 
 }
 
-/* -------- Nav Buttons & Dropdowns -------- */
+/* ---- Nav Buttons & Dropdowns ---- */
 .nav-links{
     list-style: none;
     display: flex;
@@ -93,8 +119,8 @@ main {
     padding: auto;
     text-decoration: none;
     color: inherit;
-
 }
+
 .nav-links a:hover{
     background-color: var(--_accent-1-light);
     box-shadow: var(--drop-shadow);
@@ -121,6 +147,12 @@ main {
     align-items: center;
 }
 
+.mobile.navbar{
+    display: none;
+    position: absolute;
+    inset: 0px 0px 0px 100px;
+    margin: 0;
+}
 
 /* -------- Hamburger Menu -------- */
 
@@ -195,28 +227,29 @@ main {
 }
 
 /* ------------------ Resolution Size Differences ------------------ */
-
+.mobile{ display: none; }
 .small-screen{
     display: none
 }
 @media screen and (max-width: 600px) {
+    .mobile{display: inherit;}
     .small-screen{
         display: flex;
     }
     .nav-small{
         display: none;
     }
+    
 }
 
 /* ------------------ Info Cards ------------------ */
 .card{
     display: flexbox;
     background-color: var(--_secondary-1);
-    padding: 5px 15px;
-    box-shadow: 4px 4px 3px var(--shadow-harsh);
+    padding: 12px 15px 5px 15px;
+    box-shadow: 4px 4px 3px var(--_shadow-soft);
     size: 1rem;
 }
-
 
 .card-container{
     display: flex;
@@ -233,7 +266,7 @@ main {
     padding-block-end: 10px;
     
     background-color: var(--_secondary-1);
-    box-shadow: 6px 6px 3px var(--shadow-soft);
+    box-shadow: 6px 6px 3px var(--_shadow-soft);
     
     text-decoration: none;
     color: var(--text-color);
@@ -260,10 +293,47 @@ main {
 }
 .project-card:hover{
     transform: scale(1.05);
-    box-shadow: 6px 6px 3px var(--shadow-harsh);
+    box-shadow: 6px 6px 3px var(--_shadow-harsh);
 }
 .project-card:hover h1{
     color: var(--bold-text-color);
     
 }
 
+/* ------------------ Layout ------------------ */
+.layout-60-30{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: calc(1rem + 3%);
+}
+
+.layout-30-60{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: calc(1rem + 3%);
+}
+
+.layout-50-50{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: calc(1rem + 3%);
+}
+
+.center-text{
+    text-align: center;
+}
+
+.no-margin-top{
+    margin-block-start: 0px;
+}
+
+.use-bulletpoints{
+    list-style: circle;
+}
+/* ------------------ Color ------------------ */
+.bg-accent-1{
+    background-color: var(--_accent-1) ;
+}
+.light-text{
+    color:var(--text-color-light);
+}

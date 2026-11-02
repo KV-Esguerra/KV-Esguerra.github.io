@@ -1,0 +1,71 @@
+:root{
+    --accent-1: #3c055c;
+    --secondary-1: #ECE4CE;
+    --bg-image: url(/Projects/Spell-Sling/Assets/BG.png);
+    --shadow-soft: rgba(122,24,187,0.7);
+    /* --shadow-harsh: rgba(209, 203, 144, 0.7); */
+}
+
+.card-display{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30%);
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.rule-card-display{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,46%);
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    margin: 0;
+    text-align: center;
+}
+
+.playing-card{
+    border-radius: 5px;
+    box-shadow: var(--drop-shadow);
+}
+
+.rules-pdf{
+    width: 148.6px;
+    height: 210.4px;
+}
+
+.img-80{
+    width: 80%;
+    justify-self: center;
+}
+
+.card{
+    box-shadow: none;
+}
+
+.rules-carousel{
+    display: flex;
+    height: fit-content;
+
+    overflow: hidden;
+    /* overflow-x: auto; */
+}
+
+.rules-carousel img{
+    width: 100%;
+    aspect-ratio: 2,1.414;
+}
+
+.rules-carousel ul:first-child img{
+    width: 50%;
+    aspect-ratio: 1,1.414;
+}
+
+.rules-carousel ul{
+    width: 100%;
+    align-items: center;
+    padding: 0;
+}

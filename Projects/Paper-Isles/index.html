@@ -23,41 +23,34 @@
 
         <section id="attackCard" class="card attack">
             <div>
-                <video id="Light">
+                <video class="light">
                     <source src="Videos/Light.mp4">
                 </video>
-                <video id="Medium" >
+                <video class="medium" >
                     <source src="Videos/Medium.mp4">
                 </video>
-                <video id="Heavy" >
+                <video class="heavy" >
                     <source src="Videos/Heavy-2.mp4">
                 </video>
                 <div class="buttons">
-                    <button id="Light"></button>
-                    <button id="Medium"></button>
-                    <button id="Heavy"></button>
+                    <button id="light" class="attackButton"><img src="Assets/Light-Icon.png"></button>
+                    <button id="medium" class="attackButton"><img src="Assets/Medium-Icon.png"></button>
+                    <button id="heavy" class="attackButton"><img src="Assets/Heavy-Icon.png"></button>
                 </div>
             </div>
             <div>
-                <h2>Light Attack</h2>    
-                <p>Simple swing with particle trail</p>
+                <h2 class="light">Light Attack</h2>
+                <p class="light">Simple swing with particle trail</p>
+
+                <h2 class="medium">Medium Attack</h2>
+                <p class="medium">Hitstop combined with a shader</p>
+
+                <h2 class="heavy">Heavy Atatack</h2>
+                <p class="heavy"></p>
             </div>
             
         </section>
-        <section class="card">
-            <h2>Medium Attack</h2>
-            <video controls>
-                <source src="Videos/Medium.mp4">
-            </video>
-            <p>Hitstop combined with a shader</p>
-        </section>
-        <section class="card">
-            <h2>Heavy Attack</h2>
-            <video controls>
-                <source src="Videos/Heavy.mp4">
-            </video>
-            
-        </section>
+        
         <section class="card">
             <h2>Taking Damage</h2>
             <video controls>

@@ -1,14 +1,57 @@
 .card.attack{
+    position: relative;
     display:  grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 10px;
+    z-index: 1;
 }
 
 .attack .buttons{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: calc(1rem + 3%);
+    margin-block: 5px;
 }
+
+.attack .buttons button{
+    --button-size : clamp(1rem,calc(.5rem + 7vw),5rem);
+    position: relative;
+    display: block;
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: #D8A762;
+    border: 0.25rem solid #5F0808;
+    padding: 0;
+
+    img{ width: 100%;height: 100%;}
+}
+
+.attack .buttons button:hover{
+    background-color: #e4a349;
+    border: 0.25rem solid #A10303;
+}
+
+.attack .buttons button.active{
+    --button-size : clamp(1.2rem,calc((.5rem + 7vw) * 1.15),6rem);
+}
+.attack .buttons button.active::before{
+    content: '';
+    position: absolute;
+    
+    top: 57.5%;
+    left: 42.5%;
+    transform: translate(-50%,-50%);
+    
+    width: 110%;
+    height: 110%;
+    
+    background-color: #A10303;
+
+    rotate: 9deg;
+    z-index: -1;
+}
+
 
 @media screen and (max-width: 580px)  {
     .card.attack{
